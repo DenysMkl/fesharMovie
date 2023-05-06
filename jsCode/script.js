@@ -4,8 +4,6 @@ let mass = {
 
 }
 
-console.log(times)
-
 times.forEach(element => {
     list = Array.from(element.querySelectorAll('.number')).map(val=>val.textContent)
     mass[element.classList.value] = list.join('')
@@ -18,7 +16,7 @@ function TransferToSeconds(h, m, s) {
 }
 
 totalTime = TransferToSeconds(mass['hours'], mass['minutes'], mass['seconds'])
-console.log(totalTime)
+
 timer = setInterval(()=>{
     totalTime-=1
     newHours = String(Math.floor(totalTime / 3600))
