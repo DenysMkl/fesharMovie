@@ -1,0 +1,478 @@
+:root {
+  --margin-for-objects-on-pc: 300px;
+  --padding-between-list-items: 12px 0;
+  --color-for-text: #E3E3E3;
+  --size-for-normal-text: 16px ;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  min-height: 100%;
+  line-height: 1;
+  font-family: "Lexend", sans-serif;
+  font-size: 12px;
+  background-color: #1E1E1E;
+  height: 100%;
+}
+
+[class*=_container] {
+  max-width: 1140px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  background: url("../../photos/main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
+}
+.wrapper header {
+  margin-left: var(--margin-for-objects-on-pc);
+}
+.wrapper header .header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.wrapper header .header_container .formBlock {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 700px;
+          flex: 1 1 700px;
+  min-width: 300px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#303030), to(rgba(48, 48, 48, 0.4)));
+  background: linear-gradient(#303030, rgba(48, 48, 48, 0.4));
+  border-radius: 40px;
+  margin: 16px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.wrapper header .header_container .formBlock .searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px 20px;
+}
+.wrapper header .header_container .formBlock .searchBar #findFilm {
+  background-color: transparent;
+  outline: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: var(--color-for-text);
+  font-size: var(--size-for-normal-text);
+  text-transform: none;
+  font-weight: normal;
+}
+.wrapper header .header_container .formBlock .searchBar #findFilm::-webkit-input-placeholder {
+  color: var(--color-for-text);
+  text-transform: capitalize;
+}
+.wrapper header .header_container .formBlock .searchBar #findFilm::-moz-placeholder {
+  color: var(--color-for-text);
+  text-transform: capitalize;
+}
+.wrapper header .header_container .formBlock .searchBar #findFilm:-ms-input-placeholder {
+  color: var(--color-for-text);
+  text-transform: capitalize;
+}
+.wrapper header .header_container .formBlock .searchBar #findFilm::-ms-input-placeholder {
+  color: var(--color-for-text);
+  text-transform: capitalize;
+}
+.wrapper header .header_container .formBlock .searchBar #findFilm::placeholder {
+  color: var(--color-for-text);
+  text-transform: capitalize;
+}
+.wrapper header .header_container .logRegBlock {
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: var(--color-for-text);
+  font-size: var(--size-for-normal-text);
+  text-transform: capitalize;
+  font-weight: normal;
+}
+.wrapper header .header_container .logRegBlock > * {
+  margin: 0 12px;
+}
+.wrapper header .header_container .logRegBlock .bell {
+  position: relative;
+  margin: 0 16px;
+}
+.wrapper header .header_container .logRegBlock .bell::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
+  padding: 24px;
+  border: #8685EF solid 2px;
+  border-radius: 100%;
+}
+.wrapper header .header_container .logRegBlock :where(.logBut, .regBut) {
+  border: #8685EF solid 2px;
+  width: 100px;
+  padding: 16px 0;
+  text-align: center;
+  border-radius: 40px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: var(--color-for-text);
+}
+.wrapper header .header_container .logRegBlock .regBut {
+  background-color: #8685EF;
+}
+.wrapper main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: var(--margin-for-objects-on-pc);
+}
+.wrapper main .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 16px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(19, 19, 19)), to(rgba(0, 0, 0, 0.3)));
+  background: linear-gradient(rgb(19, 19, 19), rgba(0, 0, 0, 0.3));
+  color: var(--color-for-text);
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: normal;
+  max-width: var(--margin-for-objects-on-pc);
+  width: 100%;
+}
+.wrapper main .navbar .logo {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.wrapper main .navbar .navbarBlock {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper main .navbar .navbarBlock .navbarItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: var(--padding-between-list-items);
+}
+.wrapper main .navbar .navbarBlock .navbarItem .iconItem {
+  margin-right: 20px;
+}
+.wrapper main .navbar .usefulLinkBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper main .navbar .usefulLinkBlock .usefulLinkItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: var(--padding-between-list-items);
+}
+.wrapper main .navbar .usefulLinkBlock .usefulLinkItem .social {
+  font-weight: bold;
+}
+.wrapper main .navbar .usefulLinkBlock .usefulLinkItem .netsBlock {
+  color: var(--color-for-text);
+}
+.wrapper main .navbar .usefulLinkBlock .usefulLinkItem .netsBlock .netIcon {
+  margin-right: 20px;
+}
+.wrapper main .main_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper main .main_container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  z-index: 1;
+}
+.wrapper main .main_container .content .premierMovie {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 auto;
+          flex: 2 1 auto;
+  position: relative;
+  height: 200px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: -1;
+}
+.wrapper main .main_container .content .premierMovie .board {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  z-index: 1;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.6)), to(rgba(20, 20, 20, 0.35)));
+  background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.35));
+  padding: 10px;
+  border-radius: 16px;
+  -webkit-box-shadow: rgba(198, 198, 198, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(198, 198, 198, 0.15) 1.95px 1.95px 2.6px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+.wrapper main .main_container .content .premierMovie .board :where(.hours, .minutes, .seconds) {
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.wrapper main .main_container .content .premierMovie .board :where(.hours, .minutes, .seconds) .number {
+  color: #181818;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: normal;
+  padding: 16px 12px;
+  background-color: #EBEBEB;
+  margin: 2px;
+  border-radius: 12px;
+}
+.wrapper main .main_container .content .premierMovie .arrows {
+  z-index: 1;
+  padding: 10px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  border-radius: 8px;
+  background-color: #141414;
+}
+.wrapper main .main_container .content .premierMovie .arrows::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
+  height: 70%;
+  width: 2px;
+  background-color: #E3E3E3;
+}
+.wrapper main .main_container .content .premierMovie .arrows .arrow {
+  padding: 0 16px 0 12px;
+}
+.wrapper main .main_container .content .premierMovie .arrows .mirror {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.wrapper main .main_container .content .premierMovie .poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 14px;
+}
+.wrapper main .main_container .content .addNews {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 3 auto;
+          flex: 2 3 auto;
+}
