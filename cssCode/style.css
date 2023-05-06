@@ -68,7 +68,7 @@ body {
           flex-direction: column;
   min-height: 100%;
   overflow: hidden;
-  background: url("../../photos/main.png");
+  background: url("../photos/main.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
